@@ -1,7 +1,7 @@
 const input = document.getElementById("input");
 const button = document.getElementById("btn");
 
-//setting fake checker function
+//setting initial checker function
 const checkIt = () => {
   if (input.value.split("").reverse().join("") === input.value) {
     alert("A palindrome!");
