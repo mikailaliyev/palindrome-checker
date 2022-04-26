@@ -1,4 +1,4 @@
-let input = document.getElementById("input");
+const input = document.getElementById("input");
 const button = document.getElementById("btn");
 let result = document.getElementById("result");
 console.log(input);
@@ -22,7 +22,9 @@ const checkIt = () => {
   }
   console.log(newArr);
   return (result.textContent =
-    newArr.length < 2 ? "Not a palindrom now, but might be one!" : "Nope, it's not a palindrome");
+    newArr.length < 2
+      ? "Not a palindrom now, but might be one!"
+      : "Nope, it's not a palindrome");
 };
 
 //Starting checker func either with web button or with Enter button
