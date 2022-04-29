@@ -1,11 +1,18 @@
 body {
   height: 100vh;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
   text-align: center;
   overflow: hidden;
+  background: rgb(9, 73, 121);
+  background: linear-gradient(
+    0deg,
+    rgba(9, 73, 121, 0.9584033442478554) 16%,
+    rgba(0, 212, 255, 1) 74%
+  );
 }
 
 h1 {
@@ -14,6 +21,7 @@ h1 {
 
 a {
   text-decoration: none;
+  color: #094979;
 }
 
 input {
@@ -33,4 +41,5 @@ input {
 
 p {
   font-size: 2rem;
+  color: white;
 }
