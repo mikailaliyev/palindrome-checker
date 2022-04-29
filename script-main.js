@@ -6,7 +6,7 @@ console.log(input);
 const checkIt = () => {
   let newArr = [];
   let value = input.value;
-  if (input.value.length < 2) {
+  if (input.value.length < 2 || parseInt(input.value) < 0) {
     return (result.textContent = "Not valid");
   }
   value = value.split("");
