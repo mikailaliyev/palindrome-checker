@@ -1,1 +1,1 @@
-# palindrome-checker
+# Palindrom Checher
