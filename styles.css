@@ -48,3 +48,23 @@ p {
   font-size: 2rem;
   color: white;
 }
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  input {
+    font-size: 2rem;
+    margin-top: 2%;
+    width: 90%;
+    text-align: center;
+  }
+
+  #btn {
+    margin-top: 3%;
+    font-size: 2rem;
+    border-radius: 5px;
+    width: 50%;
+    padding: 0.2%;
+  }
+}
