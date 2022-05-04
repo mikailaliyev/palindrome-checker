@@ -8,8 +8,8 @@ body {
   text-align: center;
   overflow: hidden;
   background: #00b4db;
-  background: -webkit-linear-gradient(45deg, #05a8de, #09e518);
-  background: linear-gradient(45deg, #05a8de, #09e518);
+  background: -webkit-linear-gradient(45deg, #05a8de, #2ced39);
+  background: linear-gradient(45deg, #05a8de, #2ced39);
 }
 
 h1 {
@@ -21,6 +21,9 @@ a {
   color: #094979;
 }
 
+a:hover {
+  text-shadow: 3px 3px 5px #094979;
+}
 
 input {
   font-size: 2rem;
