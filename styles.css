@@ -41,6 +41,28 @@ input {
   width: auto;
   padding: 0.5% 2%;
   border-radius: 10px;
+  border-width: 2.5px;
+  animation-name: border-color;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes border-color {
+  0% {
+    border-color: #05a8de;
+  }
+  20% {
+    border-color: #4fbce0;
+  }
+  50% {
+    border-color: #7cc8e1;
+  }
+  80% {
+    border-color: #3be992;
+  }
+  100% {
+    border-color: rgb(13, 206, 13);
+  }
 }
 
 p {
