@@ -47,6 +47,9 @@ document.addEventListener("keydown", (event) => {
 
 //Showing history of palindrome checks
 historyButton.addEventListener("click", () => {
+  historyButton.textContent === "Show History"
+    ? (historyButton.textContent = "Hide History")
+    : (historyButton.textContent = "Show History");
   historyLog.innerHTML = "";
   myHistory.forEach((e) => (historyLog.innerHTML += e + "<br>"));
   if (historyLog.style.visibility === "hidden") {
