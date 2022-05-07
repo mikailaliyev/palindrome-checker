@@ -5,7 +5,8 @@ const historyClear = document.getElementById("historyClear");
 const historyLog = document.getElementById("historyLog");
 let myHistory = [];
 let result = document.getElementById("result");
-console.log(input);
+
+
 //setting initial checker function
 const checkIt = () => {
   let newArr = [];
