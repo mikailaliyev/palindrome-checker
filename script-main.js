@@ -1,7 +1,8 @@
 const input = document.getElementById("input");
 const button = document.getElementById("btn");
 const historyButton = document.getElementById("historyBtn");
-const historyLog = document.getElementById("historyLog")
+const historyClear = document.getElementById("historyClear");
+const historyLog = document.getElementById("historyLog");
 let myHistory = [];
 let result = document.getElementById("result");
 console.log(input);
@@ -33,10 +34,6 @@ const checkIt = () => {
       : "Nope, it's not a palindrome");
 };
 
-const getMyHistory = () => {
-  historyLog.innerText = myHistory
-};
-
 //Starting checker func either with web button or with Enter button
 button.addEventListener("click", () => {
   checkIt();
@@ -50,5 +47,18 @@ document.addEventListener("keydown", (event) => {
 
 //Showing history of palindrome checks
 historyButton.addEventListener("click", () => {
-  getMyHistory()
+  historyLog.innerHTML = "";
+  myHistory.forEach((e) => (historyLog.innerHTML += e + "<br>"));
+  if (historyLog.style.visibility === "hidden") {
+    historyLog.style.visibility = "visible";
+  } else {
+    historyLog.style.visibility = "hidden";
+  }
+  console.log(historyLog.style.visibility);
+});
+
+//Clearing history of palindrome checks
+historyClear.addEventListener("click", () => {
+  myHistory = [];
+  historyLog.style.visibility = "hidden";
 });
