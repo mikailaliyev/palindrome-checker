@@ -10,9 +10,15 @@ console.log(input);
 const checkIt = () => {
   let newArr = [];
   let value = input.value;
+  input.focus();
+  input.select();
+  //Unlocking history buttons if there is valid input
+  if(value) {
+      historyButton.disabled = false;
+      historyClear.disabled = false;
+  }
   //Setting up history of palindromes array
   value ? myHistory.push(`${new Date().toLocaleString()} - ${value}`) : "";
-
   if (input.value.length < 2 || parseInt(input.value) < 0) {
     return (result.textContent = "Not valid");
   }
@@ -57,6 +63,7 @@ historyButton.addEventListener("click", () => {
   } else {
     historyLog.style.visibility = "hidden";
   }
+  historyLog.style.textAlign = "left";
   console.log(historyLog.style.visibility);
 });
 
@@ -64,4 +71,14 @@ historyButton.addEventListener("click", () => {
 historyClear.addEventListener("click", () => {
   myHistory = [];
   historyLog.style.visibility = "hidden";
+  historyButton.disabled = true;
+  historyClear.disabled = true;
+  historyButton.textContent = "Show History";
 });
+
+//To block buttons and clear input after refreshing the page
+window.onload = () => {
+  historyButton.disabled = true;
+  historyClear.disabled = true;
+  input.value = "";
+};
