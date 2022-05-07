@@ -104,6 +104,29 @@ p {
   h1 {
     font-size: 2rem;
   }
+
+  #historyButtons {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+  }
+
+  #historyButtons > button {
+    margin-top: 3%;
+    font-size: 1.5rem;
+    width: auto;
+    padding: 2% 3%;
+    border-radius: 10px;
+    border-width: 2.5px;
+    animation-name: border-color;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  #historyLog {
+    font-size: 1.2em;
+  }
+
   input {
     font-size: 2rem;
     margin-top: 20%;
