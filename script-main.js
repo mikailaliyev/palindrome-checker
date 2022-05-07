@@ -1,11 +1,17 @@
 const input = document.getElementById("input");
 const button = document.getElementById("btn");
+const historyButton = document.getElementById("historyBtn");
+const historyLog = document.getElementById("historyLog")
+let myHistory = [];
 let result = document.getElementById("result");
 console.log(input);
 //setting initial checker function
 const checkIt = () => {
   let newArr = [];
   let value = input.value;
+  //Setting up history of palindromes array
+  value ? myHistory.push(`${new Date().toLocaleString()} - ${value}`) : "";
+
   if (input.value.length < 2 || parseInt(input.value) < 0) {
     return (result.textContent = "Not valid");
   }
@@ -27,6 +33,10 @@ const checkIt = () => {
       : "Nope, it's not a palindrome");
 };
 
+const getMyHistory = () => {
+  historyLog.innerText = myHistory
+};
+
 //Starting checker func either with web button or with Enter button
 button.addEventListener("click", () => {
   checkIt();
@@ -36,4 +46,9 @@ document.addEventListener("keydown", (event) => {
   if (["Enter"].includes(event.key)) {
     checkIt();
   }
+});
+
+//Showing history of palindrome checks
+historyButton.addEventListener("click", () => {
+  getMyHistory()
 });
