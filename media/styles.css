@@ -16,6 +16,9 @@ h1 {
   font-size: 2.6rem;
 }
 
+h2 {
+  margin-bottom: 2%;
+}
 a {
   text-decoration: none;
   color: #094979;
@@ -27,7 +30,7 @@ a:hover {
 
 input {
   font-size: 2rem;
-  margin-top: 1%;
+  margin-top: 2%;
   width: 50%;
   text-align: center;
   border-radius: 10px;
@@ -54,7 +57,7 @@ input {
 
 #historyButtons > button {
   margin-top: 3%;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   width: auto;
   padding: 2% 3%;
   border-radius: 10px;
@@ -64,9 +67,9 @@ input {
   animation-iteration-count: infinite;
 }
 
-#btn {
-  margin-top: 3%;
-  font-size: 2rem;
+#check-button {
+  margin-top: 2%;
+  font-size: 1.5rem;
   border-radius: 5px;
   width: auto;
   padding: 0.5% 2%;
@@ -109,11 +112,12 @@ p {
     display: flex;
     width: 90%;
     justify-content: space-between;
+    font-size: 1.5rem;
   }
 
   #historyButtons > button {
     margin-top: 3%;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     width: auto;
     padding: 2% 3%;
     border-radius: 10px;
@@ -134,11 +138,11 @@ p {
     text-align: center;
   }
 
-  #btn {
+  #check-button {
     margin-top: 10%;
-    font-size: 2rem;
-    border-radius: 5px;
+    font-size: 1.5rem;
+    border-radius: 10px;
     width: 50%;
-    padding: 0.2%;
+    padding: 2% 3%;
   }
 }

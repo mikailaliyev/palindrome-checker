@@ -1,11 +1,10 @@
 const input = document.getElementById("input");
-const button = document.getElementById("btn");
+const button = document.getElementById("check-button");
 const historyButton = document.getElementById("historyBtn");
 const historyClear = document.getElementById("historyClear");
 const historyLog = document.getElementById("historyLog");
 let myHistory = [];
 let result = document.getElementById("result");
-
 
 //setting initial checker function
 const checkIt = () => {
@@ -14,9 +13,9 @@ const checkIt = () => {
   input.focus();
   input.select();
   //Unlocking history buttons if there is valid input
-  if(value) {
-      historyButton.disabled = false;
-      historyClear.disabled = false;
+  if (value) {
+    historyButton.disabled = false;
+    historyClear.disabled = false;
   }
   //Setting up history of palindromes array
   value ? myHistory.push(`${new Date().toLocaleString()} - ${value}`) : "";
